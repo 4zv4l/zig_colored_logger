@@ -15,7 +15,7 @@ pub fn myLogFn(
         .warn => c.yellow().fmt("WARN "),
         .info => c.blue().fmt("INFO "),
         .debug => c.white().fmt("DEBUG"),
-        .err => c.red().fmt("ERR  "),
+        .err => c.red().fmt("ERROR"),
     };
     const prefix2 = if (scope == .default) " " else "(" ++ @tagName(scope) ++ ") ";
     const stderr = std.io.getStdErr().writer();
